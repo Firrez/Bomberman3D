@@ -10002,9 +10002,6 @@ MonoBehaviour:
   targets:
     serializedVersion: 2
     m_Bits: 14976
-  walls:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!54 &-8936708529991834323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20003,17 +20000,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ffdfad76d2f7648d19c79be026141ab7,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdfad76d2f7648d19c79be026141ab7,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdfad76d2f7648d19c79be026141ab7,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.95
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ffdfad76d2f7648d19c79be026141ab7,
         type: 3}

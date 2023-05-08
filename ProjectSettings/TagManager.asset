@@ -13,6 +13,7 @@ TagManager:
   - Character
   - Kick
   - Wall
+  - Ground
   layers:
   - Default
   - TransparentFX

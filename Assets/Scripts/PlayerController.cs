@@ -51,6 +51,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bomb") && _canKick)
         {
+            var bomb = other.gameObject.GetComponent<BombController>();
+            if (!bomb.HasGrounded()) return;
             Vector3 dir = (other.transform.position - transform.position).normalized;
             dir.y = 0;
             other.rigidbody.AddForce(dir * 700, ForceMode.Impulse);

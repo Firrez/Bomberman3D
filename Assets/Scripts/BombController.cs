@@ -14,6 +14,7 @@ public class BombController : MonoBehaviour
     private float _countdown;
     private float _radius;
     private bool _hasExploded;
+    private bool _hasGrounded;
 
     public LayerMask bomb;
     public LayerMask targets;
@@ -54,6 +55,11 @@ public class BombController : MonoBehaviour
     public float GetRadius()
     {
         return _radius;
+    }
+
+    public bool HasGrounded()
+    {
+        return _hasGrounded;
     }
     
     private void Explode()
@@ -105,6 +111,10 @@ public class BombController : MonoBehaviour
             var speed = _velocity.magnitude;
             var dir = Vector3.Reflect(_velocity.normalized, other.contacts[0].normal);
             _rb.velocity = dir * (speed - 3);
+        }
+        else if (other.gameObject.CompareTag("Ground"))
+        {
+            _hasGrounded = true;
         }
     }
 }

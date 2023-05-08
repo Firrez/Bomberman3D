@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -18,10 +19,18 @@ public class PlayerMovement : MonoBehaviour
     public delegate void UpdateUI(float speed);
     public UpdateUI UIDelegate;
 
+    private UIManager _uiManager;
+
     private bool _dead;
+
+    private void Awake()
+    {
+        _uiManager = GetComponent<UIManager>();
+        _rb = GetComponent<Rigidbody>();
+    }
+
     private void Start()
     {
-        _rb = GetComponent<Rigidbody>();
         _rb.freezeRotation = true;
         _rb.drag = drag;
         UpdateUi();
@@ -73,7 +82,14 @@ public class PlayerMovement : MonoBehaviour
 
     public void SetDead()
     {
+        _uiManager.ReportDead("Player");
         _dead = true;
+        Invoke(nameof(CleanUp), 5);
+    }
+
+    private void CleanUp()
+    {
+        Destroy(gameObject);
     }
 
     private void UpdateUi()
