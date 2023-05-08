@@ -15,6 +15,7 @@ Made By: Frederik Rasmussen
 3. [Props 3D](https://assetstore.unity.com/packages/3d/props/props-3d-221035) - Used only the bomb.
 4. [Grass-Sway](https://github.com/angelsophia1/Grass-Sway) - Used only the grass textures.
 5. [Character models & animations](https://www.mixamo.com/)
+6. PowerUps are the original assets from [Atomic Bomberman](https://www.myabandonware.com/game/atomic-bomberman-bat)
 
 ## Links
 * [Video](https://youtu.be/pE0_RHoxbXU)
