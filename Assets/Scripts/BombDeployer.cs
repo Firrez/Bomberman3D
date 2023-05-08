@@ -8,6 +8,7 @@ public class BombDeployer : MonoBehaviour
     public int bombCount;
     public float radius = 10f;
     public GameObject bombPrefab;
+    public Transform orientation;
 
     public delegate void UpdateUI(int bombCount, float bombRadius);
     public UpdateUI UIDelegate;
@@ -56,7 +57,8 @@ public class BombDeployer : MonoBehaviour
         _audioSource.Play();
         bombCount--;
         UpdateBombUi();
-        var bomb = Instantiate(bombPrefab, transform.position, transform.rotation);
+        var tf = transform;
+        var bomb = Instantiate(bombPrefab, tf.position + orientation.forward * 2, tf.rotation);
         var controller = bomb.GetComponent<BombController>();
         controller.SetRadius(radius);
         controller.Delegate = IncrementBombCount;

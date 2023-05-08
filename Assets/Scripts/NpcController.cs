@@ -42,7 +42,7 @@ public class NpcController : MonoBehaviour
         
         if (bombInRange) RunForCover();
         else if (enemyInRange) HuntEnemy();
-        //else if (powerUpInRange) CollectPowerUp();
+        else if (powerUpInRange) CollectPowerUp();
         else if (wallInRange) BlowWall();
         else Roam();
     }
@@ -70,7 +70,7 @@ public class NpcController : MonoBehaviour
         var enemy = Physics.OverlapSphere(position, 20, enemyMask).First();
         var dist = Vector3.Distance(position, enemy.transform.position);
         
-        if (dist > _npcBombController.bombRadius / 2)
+        if (dist > _npcBombController.GetRadius() / 2)
         {
             _navMeshAgent.SetDestination(enemy.transform.position);
         }
@@ -79,7 +79,9 @@ public class NpcController : MonoBehaviour
 
     private void CollectPowerUp()
     {
-        
+        var position = transform.position;
+        var power = Physics.OverlapSphere(position, 20, powerUp).First();
+        _navMeshAgent.SetDestination(power.transform.position);
     }
 
     private void BlowWall()

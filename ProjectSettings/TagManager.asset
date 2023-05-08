@@ -11,6 +11,8 @@ TagManager:
   - Slow
   - Spew
   - Character
+  - Kick
+  - Wall
   layers:
   - Default
   - TransparentFX

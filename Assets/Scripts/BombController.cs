@@ -17,15 +17,17 @@ public class BombController : MonoBehaviour
 
     public LayerMask bomb;
     public LayerMask targets;
-    
     public delegate void CountDelegate();
     public CountDelegate Delegate;
 
     private UIManager _uiManager;
+    private Rigidbody _rb;
+    private Vector3 _velocity;
 
     private void Awake()
     {
         _uiManager = GameObject.Find("Player").GetComponent<UIManager>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     void Start()
@@ -35,6 +37,7 @@ public class BombController : MonoBehaviour
     
     void Update()
     {
+        _velocity = _rb.velocity;
         _countdown -= Time.deltaTime;
 
         if (_countdown <= 0 && !_hasExploded)
@@ -93,5 +96,15 @@ public class BombController : MonoBehaviour
 
         Delegate();
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Wall"))
+        {
+            var speed = _velocity.magnitude;
+            var dir = Vector3.Reflect(_velocity.normalized, other.contacts[0].normal);
+            _rb.velocity = dir * (speed - 3);
+        }
     }
 }
