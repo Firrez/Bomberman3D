@@ -1,7 +1,4 @@
-using System;
-using UnityEditor.UIElements;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class BombDeployer : MonoBehaviour
 {

@@ -146,6 +146,7 @@ public class NpcController : MonoBehaviour
         
         if (Physics.Raycast(_destination, -transform.up, 2f, ground))
         {
+            // Checks if position is inside wall.
             var impassable = Physics.CheckSphere(_destination, 0);
             if (impassable) return;
             _destSet = true;
