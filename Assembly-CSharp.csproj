@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\PowerUpAnimator.cs" />
      <Compile Include="Assets\Scripts\PlayerCam.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\MainMenu.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\Downloads\Original Bricks Textures\Bricks Texture 04" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
