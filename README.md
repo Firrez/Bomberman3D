@@ -10,7 +10,6 @@ Made By: Frederik Rasmussen
 5. [Wall bounce](https://www.youtube.com/watch?v=RoZG5RARGF0)
 6. [NavMesh](https://www.youtube.com/watch?v=atCOd4o7tG4&t=2s)
 7. [AI](https://www.youtube.com/watch?v=UjkSFoLxesw&t=196s)
-8. [HUD & UI](https://learn.unity.com/tutorial/displaying-score-and-text?uv=2019.4&projectId=5f158f1bedbc2a0020e51f0d)
 
 ## Assets Used
 1. [Brick Textures](https://assetstore.unity.com/packages/2d/textures-materials/brick/15-original-bricks-textures-72427)
