@@ -128,6 +128,8 @@ MonoBehaviour:
   flame: {fileID: 3482694181293582971, guid: 92f80e8479f1b4641badf118d7d4ff06, type: 3}
   skate: {fileID: 2978970339390190271, guid: d7ed4104a3a091b43a008e16246b1b6d, type: 3}
   slow: {fileID: 7200986939993043600, guid: a48b400fc54f20f48a94b64d49a12842, type: 3}
+  spew: {fileID: 5780224348118713354, guid: 47b039a71ea899c4893b88e6facd1727, type: 3}
+  kick: {fileID: 7842427735821725838, guid: fde8d281ce2e2c946891dee8b36eb7e9, type: 3}
 --- !u!208 &6981749666685154265
 NavMeshObstacle:
   m_ObjectHideFlags: 0
