@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7231778918118145262}
   - component: {fileID: 684388407596601253}
   - component: {fileID: 8390076153131609056}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: POW-Kick
   m_TagString: Kick
   m_Icon: {fileID: 0}

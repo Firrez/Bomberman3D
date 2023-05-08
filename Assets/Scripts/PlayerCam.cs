@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class PlayerCam : MonoBehaviour
 {
-    public float sensX;
-    public float sensY;
+    public float sens = 2;
 
     public Transform orientation;
 
     private float _xRotation;
-    private float _yRotation = -90f;
 
     private void Start()
     {
@@ -22,16 +20,14 @@ public class PlayerCam : MonoBehaviour
     private void Update()
     {
         //get mouse input
-        var mouseX = Input.GetAxisRaw("Mouse X") * Time.deltaTime * sensX;
-        var mouseY = Input.GetAxisRaw("Mouse Y") * Time.deltaTime * sensY;
+        var mouseX = Input.GetAxis("Mouse X") * sens;
+        var mouseY = Input.GetAxis("Mouse Y") * sens;
 
-        _yRotation += mouseX;
-        
         _xRotation -= mouseY;
         _xRotation = Mathf.Clamp(_xRotation, -90f, 90f);
         
         //rotate camera and player
-        transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
-        orientation.rotation = Quaternion.Euler(0, _yRotation, 0);
+        transform.localEulerAngles = Vector3.right * _xRotation;
+        orientation.Rotate(Vector3.up * mouseX);
     }
 }
