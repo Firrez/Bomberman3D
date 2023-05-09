@@ -19,6 +19,25 @@ Made By: Frederik Rasmussen
 5. [Character models & animations](https://www.mixamo.com/)
 6. PowerUps are the original assets from [Atomic Bomberman](https://www.myabandonware.com/game/atomic-bomberman-bat)
 
-## Links
+## Video-Link
 * [Video](https://youtu.be/pE0_RHoxbXU)
-* [Game](https://firrez.github.io/Bomberman3D-Game/)
+
+## About the game
+* [Game-Link](https://firrez.github.io/Bomberman3D-Game/)
+
+#### Controls
+* WASD to move
+* Spacebar to drop bombs
+* Mouse to look around
+
+#### PowerUps
+* Bomb gives you an additional bomb
+* Flame increases bomb radius. Starting radius is 10 which is equivalent to one block or wall.
+* Skate increases movement speed by one.
+* Turtle decreases movement speed by one.
+* Kick lets you kick bombs by walking into them.
+* Skull, (or "spew") makes you drop all available bombs in the next 15 seconds. 
+
+#### Known Issues
+* After dying, the enemies' bombs stops blowing up, this is not intentional.
+* There is no restart button, requireing you to refresh the page to play again.
