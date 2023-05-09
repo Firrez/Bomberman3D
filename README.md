@@ -41,3 +41,4 @@ Made By: Frederik Rasmussen
 #### Known Issues
 * After dying, the enemies' bombs stops blowing up, this is not intentional.
 * There is no restart button, requireing you to refresh the page to play again.
+* Quit button in main menu freezes the game.
